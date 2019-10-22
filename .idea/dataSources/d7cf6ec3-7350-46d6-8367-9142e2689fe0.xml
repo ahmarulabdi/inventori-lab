@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="kp_invlab_nia@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.7">
+    <root id="1">
+      <DefaultCasing>exact</DefaultCasing>
+    </root>
+    <schema id="2" parent="1" name="db_boomlike"/>
+    <schema id="3" parent="1" name="db_chd_bpnn"/>
+    <schema id="4" parent="1" name="db_laravel_multiauth"/>
+    <schema id="5" parent="1" name="db_sistemta"/>
+    <schema id="6" parent="1" name="db_tes"/>
+    <schema id="7" parent="1" name="findo_sistemta"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="kp_invlab_nia">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="10" parent="1" name="mysql"/>
+    <schema id="11" parent="1" name="performance_schema"/>
+    <schema id="12" parent="1" name="phpmyadmin"/>
+    <table id="13" parent="9" name="barang"/>
+    <table id="14" parent="9" name="keuangan"/>
+    <table id="15" parent="9" name="labor"/>
+    <table id="16" parent="9" name="unit_barang"/>
+    <table id="17" parent="9" name="user"/>
+    <column id="18" parent="13" name="id_barang">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="19" parent="13" name="nama_barang">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="20" parent="13" name="keterangan_barang">
+      <Position>3</Position>
+      <DataType>TEXT(65535)|-1</DataType>
+    </column>
+    <column id="21" parent="13" name="merk">
+      <Position>4</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="22" parent="13" name="posisi">
+      <Position>5</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="23" parent="13" name="minimum_stok">
+      <Position>6</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="24" parent="13" name="id_unit">
+      <Position>7</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="25" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_barang</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="14" name="id_keuangan">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="27" parent="14" name="sumber_dana">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="28" parent="14" name="dana_masuk">
+      <Position>3</Position>
+      <DataType>VARCHAR(25)|12</DataType>
+    </column>
+    <column id="29" parent="14" name="data_keluar">
+      <Position>4</Position>
+      <DataType>VARCHAR(25)|12</DataType>
+    </column>
+    <column id="30" parent="14" name="sisa_dana">
+      <Position>5</Position>
+      <DataType>VARCHAR(25)|12</DataType>
+    </column>
+    <key id="31" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_keuangan</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="32" parent="15" name="id_labor">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="33" parent="15" name="nama_labor">
+      <Position>2</Position>
+      <DataType>VARCHAR(100)|12</DataType>
+    </column>
+    <key id="34" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_labor</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="16" name="id_unit">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="36" parent="16" name="jumlah">
+      <Position>2</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="37" parent="16" name="tanggal_beli">
+      <Position>3</Position>
+      <DataType>DATETIME(19)|93</DataType>
+    </column>
+    <column id="38" parent="16" name="harga_beli">
+      <Position>4</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <column id="39" parent="16" name="id_keuangan">
+      <Position>5</Position>
+      <DataType>INT(10)|4</DataType>
+    </column>
+    <key id="40" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_unit</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="41" parent="17" name="id_user">
+      <Position>1</Position>
+      <DataType>INT(10)|4</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="42" parent="17" name="password">
+      <Position>2</Position>
+      <DataType>VARCHAR(255)|12</DataType>
+    </column>
+    <column id="43" parent="17" name="username">
+      <Position>3</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="44" parent="17" name="nama">
+      <Position>4</Position>
+      <DataType>VARCHAR(50)|12</DataType>
+    </column>
+    <column id="45" parent="17" name="hak_akses">
+      <Position>5</Position>
+      <DataType>ENUM(14)|1</DataType>
+    </column>
+    <index id="46" parent="17" name="username">
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="47" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id_user</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
